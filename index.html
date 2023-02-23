@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/styles/style.css" />
+  <title>Digikala</title>
+</head>
+
+<body>
+
+  <header class="pb-2">
+    <div class="wrapp-header container">
+      <!-- Top Header -->
+      <div class="row px-5 pt-3 mb-4">
+        <div class="col-lg-6 col-md-12 col-sm-12 px-5 d-flex gap-4 align-items-center flex-wrap">
+          <div class="img-icon">
+            <img class="img-fluid" src="./assets/images/logo.svg" alt="" srcset="" />
+          </div>
+          <div class="search-wrapper w-75">
+            <form class="search-form position-relative">
+              <button class="position-absolute btn-submit-search">
+                <svg width="20" height="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <title />
+                  <g>
+                    <path fill="#767790"
+                      d="M29.71,28.29l-6.5-6.5-.07,0a12,12,0,1,0-1.39,1.39s0,.05,0,.07l6.5,6.5a1,1,0,0,0,1.42,0A1,1,0,0,0,29.71,28.29ZM14,24A10,10,0,1,1,24,14,10,10,0,0,1,14,24Z" />
+                  </g>
+                </svg>
+              </button>
+              <input type="search" placeholder="جستجو" class="w-100 input-search-form" />
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-6 px-5 d-flex justify-content-end align-items-center gap-3 item-signin">
+          <div>
+            <a href="/signin" class="signin-btn d-flex align-items-center gap-1 border">
+              <span><svg width="24" height="24" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: none;
+                        stroke: #000;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke-width: 2px;
+                      }
+                    </style>
+                  </defs>
+                  <title />
+                  <g id="login">
+                    <line class="cls-1" x1="29" x2="16" y1="16" y2="16" />
+                    <path
+                      d="M24,25v3H8V4H24V7h2V3a1,1,0,0,0-1-1H7A1,1,0,0,0,6,3V29a1,1,0,0,0,1,1H25a1,1,0,0,0,1-1V25Z" />
+                    <line class="cls-1" x1="16" x2="20" y1="16" y2="12" />
+                    <line class="cls-1" x1="16" x2="20" y1="16" y2="20" />
+                    <line class="cls-1" x1="25" x2="25" y1="8" y2="6" />
+                    <line class="cls-1" x1="25" x2="25" y1="26" y2="24" />
+                  </g>
+                </svg></span>
+              <span>ورود | ثبت نام</span>
+            </a>
+          </div>
+          <span class="divider-line"></span>
+          <div>
+            <a href="/cart" class="cart-btn d-block">
+              <?xml version="1.0" ?><svg enable-background="new 0 0 32 32" height="24px" id="svg2" version="1.1"
+                viewBox="0 0 32 32" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                xmlns:svg="http://www.w3.org/2000/svg">
+                <g id="background">
+                  <rect fill="none" height="32" width="32" />
+                </g>
+                <g id="shopping_x5F_cart">
+                  <circle cx="9" cy="25" r="3" />
+                  <circle cx="23" cy="25" r="3" />
+                  <path
+                    d="M29.895,4.554c-0.245-0.494-0.846-0.696-1.34-0.449l-3.999,2c-0.343,0.169-0.555,0.515-0.555,0.896v1H4.387L3.948,6.684   C3.773,6.159,3.207,5.877,2.682,6.052c-0.523,0.175-0.805,0.741-0.63,1.265H2.05l4.001,12C6.187,19.727,6.568,20,7,20h18.002   c0.266,0,0.517-0.103,0.706-0.292s0.293-0.44,0.293-0.706V7.619l3.447-1.726C29.94,5.648,30.142,5.046,29.895,4.554z M7.719,18   l-2.666-8H24v8H7.719z" />
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Top Menu Header  -->
+      <div class="d-flex flex-wrap align-items-center justify-content-between">
+        <div class="bottom-header px-5 d-flex gap-3 align-items-center">
+          <div class="category-btn border-start ps-4">
+            <input id="bmenu_toggle" type=checkbox name=bmenu-open class=hidden>
+            <label class="bmenu toggle" for=bmenu_toggle accesskey=1>
+              <strong><span class=heavy>&#x2630;</span>دسته‌بندی کالاها</strong>
+            </label>
+            <div class=hide-at-start-wrapper>
+              <nav class="bmenu panel animated">
+                <a href="javascript:void(0)"><span class=triangle-origin>موبایل</span></a>
+                <a href="javascript:void(0)"><span class=triangle-origin>کالای دیجیتال</span></a>
+                <a href="javascript:void(0)"><span class=triangle-origin>خودرو</span></a>
+                <a href="javascript:void(0)"><span class=triangle-origin>مد و پوشاک</span></a>
+                <hr>
+                <a href="/"><span class=triangle-origin>ورود / عضویت</span></a>
+                <a href="/"><span class=triangle-origin>سبد خرید</span></a>
+                <article class=panel>
+                  <div class=column>
+                    <section class=titled-group>
+                      <strong>برند</strong>
+                      <a href="/">اپل</a>
+                      <a href="/">سامسونگ</a>
+                      <a href="/">شیامی</a>
+                      <a href="/">هواوی</a>
+                    </section>
+                    <section class=titled-group>
+                      <strong>قیمت</strong>
+                      <a href=#/thedavidrubensteinshow.html>ارزان</a>
+                      <a href=#/brilliantideas.html>اقتصادی</a>
+                      <a href=#/inspirego.html>گران</a>
+                    </section>
+                  </div>
+                  <div class=column>
+                    <section class=titled-group>
+                      <strong>گارانتی</strong>
+                      <a href="/">یکساله</a>
+                      <a href="/">پنج ساله</a>
+                      <a href="/">مادام العمر</a>
+                    </section>
+                  </div>
+                </article>
+                <article class=panel>
+                  <div class=column>
+                    <section class=titled-group>
+                      <strong>برند</strong>
+                      <a href="/">سامسونگ</a>
+                      <a href="/">گلدیران</a>
+                      <a href="/">بوش</a>
+                    </section>
+                  </div>
+                </article>
+                <article class=panel>
+                  <div class=column>
+                    <section class=titled-group>
+                      <strong>شرکت</strong>
+                      <a href="">سایپا</a>
+                      <a href="/">ایران خودرو</a>
+                      <a href="/">تسلا</a>
+                      <a href="/">مدیران خودرو</a>
+                    </section>
+                    <section class=titled-group>
+                      <strong>شرایط</strong>
+                      <a href="/">نقد</a>
+                      <a href="/">اقساط</a>
+                    </section>
+                  </div>
+                  <div class=column>
+                    <section class=titled-group>
+                      <strong>روکش</strong>
+                      <a href="/">صندلی</a>
+                      <a href="/">داشبورد</a>
+                      <a href="/">فرمان</a>
+                    </section>
+                  </div>
+                </article>
+                <article class=panel>
+                  <div class=column>
+                    <section class=titled-group>
+                      <strong>برند</strong>
+                      <a href="/">گوچی</a>
+                      <a href="/">جین وست</a>
+                      <a href="/">لی</a>
+                    </section>
+                    <section class=titled-group>
+                      <strong>جنسیت</strong>
+                      <a href="/">مردانه</a>
+                      <a href="/">زنانه</a>
+                    </section>
+                  </div>
+                  <div class=column>
+                    <section class=titled-group>
+                      <strong>زمستانه</strong>
+                      <a href="/">پالتو</a>
+                      <a href="/">کاپشن</a>
+                    </section>
+                    <section class=titled-group>
+                      <strong>تابستانه</strong>
+                      <a href="/">تاپ</a>
+                      <a href="/">ساحلی</a>
+                    </section>
+                  </div>
+                </article>
+              </nav>
+            </div>
+          </div>
+          <ul class="bottom-list-menu border-start ps-4 d-flex gap-3">
+            <li><a href="/">
+
+                <span>سوپرمارکت</span>
+              </a></li>
+            <li><a href="/">پرفروش‌ترین‌ها</a></li>
+            <li><a href="/">تخفیف‌ها و پیشنهادها</a></li>
+          </ul>
+          <ul class="bottom-list-menu d-flex gap-3">
+            <li><a href="/">سوالی دارید؟</a></li>
+            <li><a href="/">در دیجی‌کالا بفروشید!</a></li>
+          </ul>
+        </div>
+        <div class="location ps-5 ms-4">
+          <a href="/" class="d-inline-block">
+            <svg width="14" height="14" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: none;
+                    stroke: #212529;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 2px;
+                  }
+                </style>
+              </defs>
+              <title />
+              <g data-name="10-location" id="_10-location">
+                <path class="cls-1" d="M27,12A11,11,0,0,0,5,12C5,22,16,31,16,31S27,22,27,12Z" />
+                <circle class="cls-1" cx="16" cy="12" r="5" />
+              </g>
+            </svg>
+            <span>لطفا شهر خود را انتخاب کنید</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-page border-bottom pb-4 mb-5">
+
+    <!-- Hiro Slider -->
+    <div class="hiro-slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./assets/images/1.jpg" alt="" class="img-fluid w-100 h-100" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/images/2.jpg" alt="" class="img-fluid w-100 h-100" />
+        </div>
+      </div>
+      <div class="hiro-slider-btns">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- Quick Items -->
+    <div class="container quick-items my-4">
+      <ul class="d-flex flex-wrap gap-3 justify-content-between align-items-center">
+        <li class="text-center">
+          <a href="/">
+            <img src="./assets/images/jet.png" alt="" class="img-fluid w-100 h-100 mb-2" />
+            <p>دیجی‌کالا جت</p>
+          </a>
+        </li>
+        <li class="text-center">
+          <a href="/">
+            <img src="./assets/images/off-sell.png" alt="" class="img-fluid w-100 h-100 mb-2" />
+            <p>حراج استایل</p>
+          </a>
+        </li>
+        <li class="text-center">
+          <a href="/">
+            <img src="./assets/images/quick-sell.png" alt="" class="img-fluid w-100 h-100 mb-2" />
+            <p>خرید اقساطی</p>
+          </a>
+        </li>
+        <li class="text-center">
+          <a href="/">
+            <img src="./assets/images/digi-bussiness.png" alt="" class="img-fluid w-100 h-100 mb-2" />
+            <p>خرید عمده و سازمانی</p>
+          </a>
+        </li>
+        <li class="text-center">
+          <a href="/">
+            <img src="./assets/images/month-sell.png" alt="" class="img-fluid w-100 h-100 mb-2" />
+            <p>خرید سرماه</p>
+          </a>
+        </li>
+        <li class="text-center">
+          <a href="/">
+            <img src="./assets/images/gitt-card.png" alt="" class="img-fluid w-100 h-100 mb-2" />
+            <p>کارت هدیه</p>
+          </a>
+        </li>
+        <li class="text-center">
+          <a href="/">
+            <img src="./assets/images/digi-plus.png" alt="" class="img-fluid w-100 h-100 mb-2" />
+            <p>دیجی پلاس</p>
+          </a>
+        </li>
+        <li class="text-center more-items">
+          <a href="/">
+            <span class="d-block rounded-circle d-flex align-items-center justify-content-center mb-2"><svg
+                height="24px" id="Layer_1" style="enable-background: new 0 0 512 512" version="1.1"
+                viewBox="0 0 512 512" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g>
+                  <path
+                    d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z" />
+                  <path
+                    d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z" />
+                  <path d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z" />
+                </g>
+              </svg></span>
+            <p>بیشتر</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Slider for Special Offer Products -->
+    <div class="container mb-2">
+      <div class="offer-product-wrapper">
+        <div class="swiper offer-product-slider p-4">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide text-center">
+              <img src="./assets/images/offer-title.svg" alt="" width="92" height="77" class="img-fluid" />
+              <img src="./assets/images/box.png" alt="" width="145" height="115" class="mb-3 img-fluid" />
+              <a href="/" class="text-white"><strong>مشاهده بیشتر
+                  <svg height="14px" id="Layer_1" style="enable-background: new 0 0 512 512" version="1.1"
+                    viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <polygon fill="#fff" points="352,115.4 331.3,96 160,256 331.3,416 352,396.7 201.5,256 " />
+                  </svg></strong></a>
+            </div>
+            <div class="swiper-slide bg-white p-2">
+              <div class="img-offer-product">
+                <img src="./assets/images/p1.webp" width="150" height="150" class="img-fluid" alt="" />
+              </div>
+              <div class="price-offer-product d-flex justify-content-between align-items-center mb-3">
+                <div class="off-percent rounded-pill text-white px-1">
+                  32%
+                </div>
+                <div class="price-percent text-start">
+                  <div>
+                    <span>1,500,000</span>
+                    <span>تومان</span>
+                  </div>
+                </div>
+              </div>
+              <div class="text-start deleted-price">
+                <del>2,500,000</del>
+              </div>
+            </div>
+            <div class="swiper-slide bg-white p-2">
+              <div class="img-offer-product">
+                <img src="./assets/images/p1.webp" width="150" height="150" class="img-fluid" alt="" />
+              </div>
+              <div class="price-offer-product d-flex justify-content-between align-items-center mb-3">
+                <div class="off-percent rounded-pill text-white px-1">
+                  32%
+                </div>
+                <div class="price-percent text-start">
+                  <div>
+                    <span>1,500,000</span>
+                    <span>تومان</span>
+                  </div>
+                </div>
+              </div>
+              <div class="text-start deleted-price">
+                <del>2,500,000</del>
+              </div>
+            </div>
+            <div class="swiper-slide bg-white p-2">
+              <div class="img-offer-product">
+                <img src="./assets/images/p1.webp" width="150" height="150" class="img-fluid" alt="" />
+              </div>
+              <div class="price-offer-product d-flex justify-content-between align-items-center mb-3">
+                <div class="off-percent rounded-pill text-white px-1">
+                  32%
+                </div>
+                <div class="price-percent text-start">
+                  <div>
+                    <span>1,500,000</span>
+                    <span>تومان</span>
+                  </div>
+                </div>
+              </div>
+              <div class="text-start deleted-price">
+                <del>2,500,000</del>
+              </div>
+            </div>
+            <div class="swiper-slide bg-white p-2">
+              <div class="img-offer-product">
+                <img src="./assets/images/p1.webp" width="150" height="150" class="img-fluid" alt="" />
+              </div>
+              <div class="price-offer-product d-flex justify-content-between align-items-center mb-3">
+                <div class="off-percent rounded-pill text-white px-1">
+                  32%
+                </div>
+                <div class="price-percent text-start">
+                  <div>
+                    <span>1,500,000</span>
+                    <span>تومان</span>
+                  </div>
+                </div>
+              </div>
+              <div class="text-start deleted-price">
+                <del>2,500,000</del>
+              </div>
+            </div>
+            <div class="swiper-slide bg-white p-2">
+              <div class="img-offer-product">
+                <img src="./assets/images/p1.webp" width="150" height="150" class="img-fluid" alt="" />
+              </div>
+              <div class="price-offer-product d-flex justify-content-between align-items-center mb-3">
+                <div class="off-percent rounded-pill text-white px-1">
+                  32%
+                </div>
+                <div class="price-percent text-start">
+                  <div>
+                    <span>1,500,000</span>
+                    <span>تومان</span>
+                  </div>
+                </div>
+              </div>
+              <div class="text-start deleted-price">
+                <del>2,500,000</del>
+              </div>
+            </div>
+            <div class="swiper-slide bg-white p-2">
+              <div class="img-offer-product">
+                <img src="./assets/images/p1.webp" width="150" height="150" class="img-fluid" alt="" />
+              </div>
+              <div class="price-offer-product d-flex justify-content-between align-items-center mb-3">
+                <div class="off-percent rounded-pill text-white px-1">
+                  32%
+                </div>
+                <div class="price-percent text-start">
+                  <div>
+                    <span>1,500,000</span>
+                    <span>تومان</span>
+                  </div>
+                </div>
+              </div>
+              <div class="text-start deleted-price">
+                <del>2,500,000</del>
+              </div>
+            </div>
+            <div class="swiper-slide bg-white p-2">
+              <div class="img-offer-product">
+                <img src="./assets/images/p1.webp" width="150" height="150" class="img-fluid" alt="" />
+              </div>
+              <div class="price-offer-product d-flex justify-content-between align-items-center mb-3">
+                <div class="off-percent rounded-pill text-white px-1">
+                  32%
+                </div>
+                <div class="price-percent text-start">
+                  <div>
+                    <span>1,500,000</span>
+                    <span>تومان</span>
+                  </div>
+                </div>
+              </div>
+              <div class="text-start deleted-price">
+                <del>2,500,000</del>
+              </div>
+            </div>
+            <div class="swiper-slide bg-white p-2">
+              <div class="img-offer-product">
+                <img src="./assets/images/p1.webp" width="150" height="150" class="img-fluid" alt="" />
+              </div>
+              <div class="price-offer-product d-flex justify-content-between align-items-center mb-3">
+                <div class="off-percent rounded-pill text-white px-1">
+                  32%
+                </div>
+                <div class="price-percent text-start">
+                  <div>
+                    <span>1,500,000</span>
+                    <span>تومان</span>
+                  </div>
+                </div>
+              </div>
+              <div class="text-start deleted-price">
+                <del>2,500,000</del>
+              </div>
+            </div>
+            <div class="swiper-slide bg-white p-2">
+              <div class="img-offer-product">
+                <img src="./assets/images/p1.webp" width="150" height="150" class="img-fluid" alt="" />
+              </div>
+              <div class="price-offer-product d-flex justify-content-between align-items-center mb-3">
+                <div class="off-percent rounded-pill text-white px-1">
+                  32%
+                </div>
+                <div class="price-percent text-start">
+                  <div>
+                    <span>1,500,000</span>
+                    <span>تومان</span>
+                  </div>
+                </div>
+              </div>
+              <div class="text-start deleted-price">
+                <del>2,500,000</del>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fresh Banner Items -->
+    <div class="container">
+      <div class="fresh-wrapper p-3 mb-4 d-flex flex-wrap rounded-3 align-items-center">
+        <div class="col-lg-5 col-md-12">
+          <div class="icon-fresh flex-wrap d-flex gap-3 align-items-center">
+            <img src="./assets/images/fresh.png" alt="" width="66" height="64" class="img-fluid" />
+            <img src="./assets/images/fresh-title.svg" class="img-fluid" alt="" srcset="" />
+            <p class="mb-0 text-white rounded-pill px-3 py-1 text-center">
+              تا 31% تخفیف
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-12">
+          <div class="products-fresh d-flex flex-wrap gap-3 align-items-center justify-content-end">
+            <div class="item-fresh position-relative p-2 bg-white rounded-circle">
+              <img src="./assets/images/dave.webp" width="50" height="50" alt="" class="img-fluid rounded-circle" />
+              <p class="position-absolute text-center text-white px-2">18%</p>
+            </div>
+            <div class="item-fresh position-relative p-2 bg-white rounded-circle">
+              <img src="./assets/images/dave.webp" width="50" height="50" alt="" class="img-fluid rounded-circle" />
+              <p class="position-absolute text-center text-white px-2">18%</p>
+            </div>
+            <div class="item-fresh position-relative p-2 bg-white rounded-circle">
+              <img src="./assets/images/dave.webp" width="50" height="50" alt="" class="img-fluid rounded-circle" />
+              <p class="position-absolute text-center text-white px-2">18%</p>
+            </div>
+            <div class="item-fresh position-relative p-2 bg-white rounded-circle">
+              <img src="./assets/images/dave.webp" width="50" height="50" alt="" class="img-fluid rounded-circle" />
+              <p class="position-absolute text-center text-white px-2">18%</p>
+            </div>
+            <div class="item-fresh position-relative p-2 bg-white rounded-circle">
+              <img src="./assets/images/dave.webp" width="50" height="50" alt="" class="img-fluid rounded-circle" />
+              <p class="position-absolute text-center text-white px-2">18%</p>
+            </div>
+            <div class="item-fresh position-relative p-2 bg-white rounded-circle">
+              <img src="./assets/images/dave.webp" width="50" height="50" alt="" class="img-fluid rounded-circle" />
+              <p class="position-absolute text-center text-white px-2">18%</p>
+            </div>
+            <div class="more-products-fresh bg-white p-3 rounded-pill">
+              <p>
+                بیشتر از 100 کالا
+                <svg width="20" height="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <title />
+                  <g data-name="Layer 2" id="Layer_2">
+                    <path fill="#39ae00"
+                      d="M10.1,23a1,1,0,0,0,0-1.41L5.5,17H29.05a1,1,0,0,0,0-2H5.53l4.57-4.57A1,1,0,0,0,8.68,9L2.32,15.37a.9.9,0,0,0,0,1.27L8.68,23A1,1,0,0,0,10.1,23Z" />
+                  </g>
+                </svg>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Ads Banner -->
+    <div class="container mb-5">
+      <div class="row">
+        <div class="col-3">
+          <a href="/" class="d-block box-ads overflow-hidden">
+            <img src="./assets/images/s1.jpg" alt="" srcset="" class="img-fluid w-100 h-100" />
+          </a>
+        </div>
+        <div class="col-3">
+          <a href="/" class="d-block box-ads overflow-hidden">
+            <img src="./assets/images/s2.jpg" alt="" srcset="" class="img-fluid w-100 h-100" />
+          </a>
+        </div>
+        <div class="col-3">
+          <a href="/" class="d-block box-ads overflow-hidden">
+            <img src="./assets/images/s3.jpg" alt="" srcset="" class="img-fluid w-100 h-100" />
+          </a>
+        </div>
+        <div class="col-3">
+          <a href="/" class="d-block box-ads overflow-hidden">
+            <img src="./assets/images/s4.jpg" alt="" srcset="" class="img-fluid w-100 h-100" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Digi Category -->
+    <div class="container mb-5">
+      <h4 class="text-center my-4">دسته‌بندی‌های دیجی‌کالا</h4>
+      <div class="digi-category text-center d-flex flex-wrap align-items-center justify-content-center gap-4">
+        <a href="/" class="digi-cat d-block">
+          <img src="./assets/images/c1.webp" alt="" width="170" height="170" class="img-fluid mb-3" />
+          <p>خودرو، ابزار و تجهیزات صنعتی</p>
+        </a>
+        <a href="/" class="digi-cat d-block">
+          <img src="./assets/images/c2.webp" alt="" width="170" height="170" class="img-fluid mb-3" />
+          <p>کالای دیجیتال</p>
+        </a>
+        <a href="/" class="digi-cat d-block">
+          <img src="./assets/images/c3.webp" alt="" width="170" height="170" class="img-fluid mb-3" />
+          <p>موبایل</p>
+        </a>
+        <a href="/" class="digi-cat d-block">
+          <img src="./assets/images/c4.webp" alt="" width="170" height="170" class="img-fluid mb-3" />
+          <p>مد و پوشاک</p>
+        </a>
+        <a href="/" class="digi-cat d-block">
+          <img src="./assets/images/c5.webp" alt="" width="170" height="170" class="img-fluid mb-3" />
+          <p>کالاهای سوپرمارکتی</p>
+        </a>
+        <a href="/" class="digi-cat d-block">
+          <img src="./assets/images/c6.webp" alt="" width="170" height="170" class="img-fluid mb-3" />
+          <p>محصولات بومی و محلی</p>
+        </a>
+        <a href="/" class="digi-cat d-block">
+          <img src="./assets/images/c7.webp" alt="" width="170" height="170" class="img-fluid mb-3" />
+          <p>اسباب بازی، کودک و نوزاد</p>
+        </a>
+        <a href="/" class="digi-cat d-block">
+          <img src="./assets/images/c8.webp" alt="" width="170" height="170" class="img-fluid mb-3" />
+          <p>زیبایی و سلامت</p>
+        </a>
+        <a href="/" class="digi-cat d-block">
+          <img src="./assets/images/c9.webp" alt="" width="170" height="170" class="img-fluid mb-3" />
+          <p>خانه و آشپزخانه</p>
+        </a>
+        <a href="/" class="digi-cat d-block">
+          <img src="./assets/images/c10.webp" alt="" width="170" height="170" class="img-fluid mb-3" />
+          <p>کتاب، لوازم تحریر و هنر</p>
+        </a>
+        <a href="/" class="digi-cat d-block">
+          <img src="./assets/images/c11.webp" alt="" width="170" height="170" class="img-fluid mb-3" />
+          <p>ورزش و سفر</p>
+        </a>
+      </div>
+    </div>
+    <!-- Off Banner -->
+    <div class="container mb-5">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <a href="/" class="d-block off-banner overflow-hidden">
+            <img src="./assets/images/b1.jpg" alt="" srcset="" class="img-fluid w-100">
+          </a>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <a href="/" class="d-block off-banner overflow-hidden">
+            <img src="./assets/images/b2.jpg" alt="" srcset="" class="img-fluid w-100">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Digi Offer -->
+    <div class="container mb-5">
+      <h4 class="text-center mb-4">پیشنهاد دیجی‌کالا</h4>
+      <div class="digi-offer-wrapper">
+        <div class="swiper digi-offer-slider border rounded-3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="digi-offer-box border-start">
+                <a href="/" class="d-block text-center p-3 border-bottom">
+                  <div class="img-offer mb-3 p-2 rounded-circle">
+                    <img src="./assets/images/o1.png" alt="" class="img-fluid" width="60" height="60">
+                  </div>
+                  <p>گوشی موبایل</p>
+                </a>
+                <a href="/" class="d-block text-center p-3">
+                  <div class="img-offer mb-3 p-2 rounded-circle">
+                    <img src="./assets/images/o2.png" alt="" class="img-fluid" width="60" height="60">
+                  </div>
+                  <p>هدفون، هدست</p>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="digi-offer-box border-start">
+                <a href="/" class="d-block text-center p-3 border-bottom">
+                  <div class="img-offer mb-3 p-2 rounded-circle">
+                    <img src="./assets/images/o1.png" alt="" class="img-fluid" width="60" height="60">
+                  </div>
+                  <p>گوشی موبایل</p>
+                </a>
+                <a href="/" class="d-block text-center p-3">
+                  <div class="img-offer mb-3 p-2 rounded-circle">
+                    <img src="./assets/images/o2.png" alt="" class="img-fluid" width="60" height="60">
+                  </div>
+                  <p>هدفون، هدست</p>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="digi-offer-box border-start">
+                <a href="/" class="d-block text-center p-3 border-bottom">
+                  <div class="img-offer mb-3 p-2 rounded-circle">
+                    <img src="./assets/images/o1.png" alt="" class="img-fluid" width="60" height="60">
+                  </div>
+                  <p>گوشی موبایل</p>
+                </a>
+                <a href="/" class="d-block text-center p-3">
+                  <div class="img-offer mb-3 p-2 rounded-circle">
+                    <img src="./assets/images/o2.png" alt="" class="img-fluid" width="60" height="60">
+                  </div>
+                  <p>هدفون، هدست</p>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="digi-offer-box border-start">
+                <a href="/" class="d-block text-center p-3 border-bottom">
+                  <div class="img-offer mb-3 p-2 rounded-circle">
+                    <img src="./assets/images/o1.png" alt="" class="img-fluid" width="60" height="60">
+                  </div>
+                  <p>گوشی موبایل</p>
+                </a>
+                <a href="/" class="d-block text-center p-3">
+                  <div class="img-offer mb-3 p-2 rounded-circle">
+                    <img src="./assets/images/o2.png" alt="" class="img-fluid" width="60" height="60">
+                  </div>
+                  <p>هدفون، هدست</p>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="digi-offer-box border-start">
+                <a href="/" class="d-block text-center p-3 border-bottom">
+                  <div class="img-offer mb-3 p-2 rounded-circle">
+                    <img src="./assets/images/o1.png" alt="" class="img-fluid" width="60" height="60">
+                  </div>
+                  <p>گوشی موبایل</p>
+                </a>
+                <a href="/" class="d-block text-center p-3">
+                  <div class="img-offer mb-3 p-2 rounded-circle">
+                    <img src="./assets/images/o2.png" alt="" class="img-fluid" width="60" height="60">
+                  </div>
+                  <p>هدفون، هدست</p>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="digi-offer-box border-start">
+                <a href="/" class="d-block text-center p-3 border-bottom">
+                  <div class="img-offer mb-3 p-2 rounded-circle">
+                    <img src="./assets/images/o1.png" alt="" class="img-fluid" width="60" height="60">
+                  </div>
+                  <p>گوشی موبایل</p>
+                </a>
+                <a href="/" class="d-block text-center p-3">
+                  <div class="img-offer mb-3 p-2 rounded-circle">
+                    <img src="./assets/images/o2.png" alt="" class="img-fluid" width="60" height="60">
+                  </div>
+                  <p>هدفون، هدست</p>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="digi-offer-box border-start">
+                <a href="/" class="d-block text-center p-3 border-bottom">
+                  <div class="img-offer mb-3 p-2 rounded-circle">
+                    <img src="./assets/images/o1.png" alt="" class="img-fluid" width="60" height="60">
+                  </div>
+                  <p>گوشی موبایل</p>
+                </a>
+                <a href="/" class="d-block text-center p-3">
+                  <div class="img-offer mb-3 p-2 rounded-circle">
+                    <img src="./assets/images/o2.png" alt="" class="img-fluid" width="60" height="60">
+                  </div>
+                  <p>هدفون، هدست</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Favorite Brand -->
+    <div class="container mb-5 border rounded-3 p-4">
+      <h4 class="text-center mb-4">
+        <svg height="22" version="1.1" width="22" xmlns="http://www.w3.org/2000/svg"
+          xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+          <g transform="translate(0 -1028.4)">
+            <path
+              d="m66.36 1121.6-0.636-0.7v-1.2-1.2l0.39-2.2c0.214-1.3 0.39-2.3 0.39-2.4s-0.13-0.1-0.524-0.3l-0.525-0.3-0.544-1.3c-0.3-0.8-0.547-1.4-0.549-1.5s0.091-0.3 0.215-0.4c0.218-0.4 0.22-0.4 0.22-0.8v-0.4h-0.516-0.597c-0.045-0.1-0.181-0.3-0.302-0.5l-0.219-0.5h-0.335l-0.334 0.1-1.149-0.7-1.149-0.6-0.36-0.5c-0.198-0.2-0.394-0.4-0.435-0.4-0.042-0.1-0.259-0.1-0.482-0.1h-0.407l-1.231-1.6-1.23-1.6 0.053-0.9 0.053-0.8-0.381-0.5c-0.209-0.3-0.416-0.6-0.458-0.6-0.054-0.1-0.149-0.1-0.303 0h-0.275c-0.028 0-0.125-0.2-0.216-0.4-0.173-0.3-0.163-0.4 0.056-0.4h0.119c0-0.1-1.009-1.1-1.14-1.2-0.057 0-0.44-0.1-0.852-0.2l-0.748-0.1-1.88 1c-1.034 0.5-1.893 0.9-1.908 0.9-0.015-0.1 0.24-0.3 0.567-0.7 0.328-0.3 0.595-0.6 0.595-0.6s-0.209-0.2-0.464-0.4c-0.256-0.2-0.475-0.4-0.488-0.4-0.013-0.1-0.111-0.7-0.218-1.4-0.178-1.2-0.187-1.3-0.114-1.4 0.044 0 0.411-0.2 0.816-0.4l0.737-0.4 3.78 0.4c2.079 0.2 3.833 0.4 3.896 0.4 0.098 0 0.107 0 0.055-0.1-0.034 0-0.308-0.2-0.609-0.4-0.302-0.2-0.575-0.4-0.609-0.5-0.05 0-0.032-0.2 0.097-0.7 0.087-0.4 0.183-0.7 0.213-0.7s1.811-0.7 3.957-1.6l3.903-1.5 1.122 0.1c1.623 0.1 1.885 0.1 1.868 0.2-0.008 0-0.575 0.7-1.259 1.4-0.684 0.8-1.26 1.5-1.281 1.5s-0.004 0.1 0.04 0.1c0.042 0.1 0.832 0.7 1.756 1.5 0.924 0.7 1.68 1.4 1.68 1.4s-0.249 0.3-0.553 0.7l-0.553 0.5-1.02-0.1c-0.561-0.1-1.039-0.3-1.063-0.3-0.026 0 0.001-0.3 0.067-0.6 0.06-0.3 0.097-0.6 0.081-0.6-0.022-0.1-0.105-0.1-0.344-0.1-0.174 0-0.33 0-0.346 0.1-0.016 0-0.095 0.2-0.174 0.4l-0.145 0.4 0.106 0.4c0.058 0.2 0.092 0.4 0.075 0.4h-0.654c-1.028-0.1-0.91-0.2-1.326 0.4-0.198 0.3-0.37 0.5-0.381 0.6-0.013 0 0.08 0.2 0.255 0.3 0.212 0.2 0.371 0.3 0.698 0.3 0.233 0.1 0.494 0.2 0.579 0.2 0.108 0.1 0.302 0.2 0.634 0.6 0.264 0.3 0.51 0.6 0.548 0.6 0.064 0 0.394-0.9 0.394-1.1 0 0-0.043-0.1-0.097-0.2-0.086-0.1-0.098-0.2-0.098-0.7s0.008-0.6 0.091-0.6c0.24 0 2.477 0.4 2.524 0.5 0.03 0 0.489 0.5 1.02 1.2 0.825 1 0.955 1.1 0.897 1.2-0.038 0-0.671 0.4-1.409 0.8-0.737 0.5-1.351 0.8-1.365 0.8-0.015 0-0.037 0.2-0.05 0.5l-0.025 0.4h-0.246c-0.24 0-0.251 0-0.479 0.2-0.191 0.2-0.228 0.3-0.207 0.4 0.105 0.5 0.149 0.4-0.478 1-0.375 0.3-0.565 0.5-0.565 0.5 0.001 0.1 0.055 0.3 0.122 0.5 0.172 0.6 0.174 0.5-0.157 0.5-0.278 0-0.28 0-0.465-0.3-0.332-0.4-0.225-0.4-1.171-0.4h-0.895c-0.075 0.1-0.654 1.1-0.654 1.2s0.659 0.7 0.783 0.7c0.059 0 0.269-0.1 0.467-0.2l0.359-0.2 0.2 0.1 0.2 0.1-0.039 0.3c-0.021 0.2-0.039 0.4-0.041 0.5l-0.002 0.2h0.251c0.138 0 0.272 0 0.298 0.1 0.026 0 0.073 0.2 0.106 0.4 0.094 0.6 0.023 0.5 0.702 0.5h0.594l0.555-0.2 0.555-0.3 0.396 0.2c0.362 0.1 0.462 0.1 1.138 0.2h0.79c0.026 0.1 0.069 0.3 0.094 0.5 0.029 0.3 0.073 0.5 0.114 0.5h0.611c0.301 0 0.558 0.1 0.572 0.1 0.015 0 0.053 0.2 0.085 0.5 0.033 0.3 0.088 0.5 0.126 0.5 0.047 0.1 0.188 0.1 0.445 0.1h0.376l1.084 0.7c0.596 0.4 1.083 0.8 1.083 0.8s-0.142 0.2-0.317 0.4c-0.174 0.2-0.317 0.4-0.318 0.4s-0.042 0.4-0.089 0.8l-0.087 0.6-0.246 0.3c-0.317 0.3-4.549 4.8-4.663 5-0.079 0.1-0.08 0.1-0.012 0.3 0.041 0.1 0.074 0.3 0.074 0.5v0.3l-0.317 0.4c-0.174 0.1-0.317 0.3-0.317 0.3s0.109 0.2 0.243 0.3c0.134 0.2 0.244 0.4 0.244 0.4 0.001 0.1-0.378 0.6-0.441 0.6-0.023 0-0.328-0.4-0.678-0.8zm44.99-1.2c-0.07-0.1-0.11-0.2-0.16-0.4-0.1-0.5-0.12-0.4 0.66-1.3 0.38-0.4 0.7-0.8 0.7-0.8 0-0.1-0.12-0.3-0.27-0.5-0.14-0.2-0.26-0.4-0.26-0.4 0-0.1 0.29-0.5 0.34-0.5 0.03 0.1 0.16 0.2 0.3 0.4l0.24 0.4 0.07 0.7c0.11 1 0.15 0.9-0.52 1.7l-0.59 0.7h-0.2-0.31zm-4.61-2.2c-0.18 0-0.33 0-0.44-0.1-0.09-0.1-0.57-0.5-1.07-0.8-0.51-0.4-0.94-0.7-0.97-0.7s-0.05 0.1-0.05 0.2c0 0-0.03 0.1-0.06 0.1-0.09 0.1-2.59 0.6-2.64 0.6-0.02 0 0.02-0.3 0.09-0.5 0.07-0.3 0.12-0.5 0.12-0.5 0-0.1-0.11-0.2-0.25-0.2l-0.26-0.2-0.01-0.6-0.02-0.7 0.14-0.1c0.28-0.2 3.39-2.2 3.43-2.2 0.01 0 0.37 0.2 0.78 0.4 0.42 0.3 0.78 0.5 0.81 0.5 0.04 0 0.07-0.1 0.09-0.3 0.02-0.3 0.06-0.4 0.09-0.5h0.26 0.22l0.99 1.5c0.55 0.8 1 1.5 1 1.6 0 0-1.21 2.4-1.33 2.5-0.05 0.1-0.42 0.1-0.92 0zm-22.783-1c-0.394-0.1-0.737-0.1-0.761-0.1-0.024-0.1-0.346-0.9-0.716-1.9l-0.672-1.9 0.202-0.3 0.201-0.2v-0.5-0.6l-0.227-0.2c-0.124-0.2-0.381-0.5-0.571-0.7l-0.344-0.4 0.218-0.2c0.119-0.1 0.206-0.2 0.193-0.2-0.014 0-0.255-0.2-0.537-0.3l-0.512-0.4h-1.18c-1.169-0.1-1.181-0.1-1.317-0.2-0.075-0.1-0.357-0.3-0.625-0.6-0.268-0.2-0.502-0.4-0.519-0.4-0.018-0.1-0.048-0.7-0.068-1.4l-0.035-1.2 1.485-1.3 1.486-1.2 0.821-0.1 0.82-0.1 0.2 0.2c0.183 0.2 0.2 0.2 0.2 0.4v0.3l0.586 0.2c0.322 0.1 0.611 0.2 0.642 0.2s0.185-0.1 0.341-0.3c0.157-0.1 0.314-0.2 0.35-0.2s0.164 0.1 0.286 0.2l0.222 0.1 0.88 0.1h0.881l0.187-0.2 0.186-0.1v-0.4c0-0.3-0.017-0.4-0.061-0.4-0.033 0-0.19 0.1-0.347 0.3-0.158 0.3-0.312 0.4-0.342 0.4s-0.23-0.2-0.445-0.5c-0.403-0.6-0.549-0.7-0.495-0.4 0.016 0.1 0.044 0.3 0.063 0.5 0.027 0.4 0.022 0.4-0.036 0.4-0.038 0-0.237-0.2-0.443-0.3-0.276-0.2-0.381-0.3-0.4-0.4-0.014-0.1-0.051-0.3-0.082-0.5-0.054-0.3-0.071-0.4-0.411-0.8-0.701-0.8-0.735-0.8-0.824-0.8-0.043 0.1-0.079 0.1-0.079 0.2 0 0 0.186 0.3 0.413 0.6 0.364 0.5 0.407 0.6 0.358 0.7-0.099 0.2-0.448 0.6-0.486 0.6-0.04 0-0.099-0.1-0.191-0.6-0.059-0.3-0.147-0.3-0.79-0.8l-0.277-0.2-0.275 0.3c-0.262 0.2-0.281 0.2-0.431 0.1h-0.209c-0.028 0-0.441 0.3-0.916 0.8-0.476 0.4-0.894 0.8-0.93 0.8-0.063 0-0.093-0.1-0.466-1.1-0.251-0.7-0.25-0.7 0.041-0.6h0.62 0.389l0.111-0.2c0.153-0.3 0.141-0.3-0.086-0.6-0.11-0.1-0.19-0.2-0.18-0.3 0.01 0 0.187-0.2 0.392-0.3 0.308-0.3 0.417-0.3 0.617-0.3 0.217-0.1 0.292-0.1 0.684-0.5 0.243-0.2 0.441-0.4 0.441-0.5 0 0-0.044-0.1-0.098-0.3-0.053-0.1-0.097-0.2-0.097-0.2 0-0.1 0.352-0.3 0.435-0.3 0.027 0 0.122 0.1 0.21 0.2l0.16 0.3 0.78-0.1h0.83c0.026-0.1 0.071-0.2 0.099-0.3l0.051-0.2 0.848-0.3c0.466-0.2 0.855-0.4 0.865-0.4s-0.046-0.1-0.124-0.2l-0.142-0.1-0.519 0.1c-0.286 0.1-0.55 0.2-0.587 0.2-0.069-0.1-0.321-0.6-0.321-0.7 0 0 0.165-0.2 0.366-0.3 0.201-0.2 0.366-0.3 0.366-0.4 0 0-0.38-0.4-0.455-0.4-0.066 0.1-1.008 1.3-1.008 1.3s0.079 0.1 0.176 0.2l0.176 0.2-0.042 0.4-0.042 0.4-0.406 0.1c-0.633 0.2-0.646 0.2-0.768-0.1-0.058-0.1-0.126-0.2-0.151-0.3-0.029 0-0.235 0-0.555 0.1h-0.541c-0.041-0.1 0.031-0.9 0.083-1 0.094-0.2 1.704-2.3 1.796-2.4 0.076-0.1 0.353-0.2 1.054-0.3 0.523-0.2 1.003-0.3 1.066-0.3s0.772 0.2 1.575 0.4c0.804 0.2 1.471 0.3 1.483 0.3 0.101 0-0.421 0.8-0.528 0.8-0.084 0.1-0.062 0.1-0.584 0h-0.475c0 0.1 0.151 0.3 0.337 0.4l0.337 0.4 0.187-0.1c0.103-0.1 0.632-0.4 1.175-0.8l0.987-0.6 0.741-0.1h0.758c0.01-0.1-0.191-0.3-0.446-0.6-0.256-0.3-0.465-0.6-0.465-0.6 0.001 0 0.269-0.3 0.597-0.6l0.597-0.7 0.848-0.3c0.814-0.4 0.851-0.4 0.916-0.3 0.086 0.1 0.187 0.5 0.148 0.5-0.016 0-0.338 0.1-0.716 0.3-0.378 0.1-0.739 0.2-0.802 0.3-0.121 0-0.907 0.9-0.907 0.9 0 0.1 0.161 0.2 0.969 0.7 0.385 0.2 0.714 0.4 0.731 0.4s-0.019-0.1-0.079-0.2c-0.059-0.1-0.108-0.2-0.108-0.2 0-0.1 1.014-1 1.105-1 0.031 0 0.503 0.1 1.048 0.2 0.607 0.1 1.011 0.2 1.039 0.2 0.025 0 0.113-0.2 0.195-0.3l0.149-0.3 1.847-0.7 1.846-0.7 0.813 0.2c0.45 0.1 1 0.2 1.24 0.2 0.23 0.1 0.42 0.1 0.42 0.2 0 0-0.37 0.2-0.83 0.5-0.48 0.3-0.81 0.5-0.79 0.5s1.23 0.2 2.68 0.3c1.44 0.2 2.71 0.3 2.82 0.3 0.18 0 0.2 0 0.66-0.4 0.26-0.3 0.49-0.5 0.52-0.5s0.14 0.2 0.26 0.4c0.11 0.2 0.23 0.4 0.26 0.4s0.67 0.1 1.42 0.2l1.36 0.1 0.38 0.2c0.45 0.2 0.46 0.2 1.58 0.1 0.46-0.1 0.9-0.1 0.99-0.1h0.16v1.5c0 0.8-0.02 1.5-0.04 1.6-0.02 0-0.51 0-1.08 0.1-0.58 0-1.08 0.1-1.11 0.1-0.04 0.1-0.05 0.2-0.03 0.5l0.02 0.4-0.64 0.8c-0.35 0.5-0.66 0.9-0.68 0.9-0.03 0-0.06-0.1-0.07-0.1-0.04-0.2-0.23-1.4-0.23-1.5 0 0 0.15-0.2 0.32-0.4 0.18-0.3 0.32-0.5 0.32-0.5 0-0.1 0.01-0.1-1.36 0.1l-1.18 0.1-0.75 0.4c-0.41 0.2-0.77 0.4-0.8 0.4-0.07 0.1-0.16 0.6-0.12 0.6 0.02 0 0.24 0 0.48-0.1 0.25 0 0.47-0.1 0.5-0.1 0.03 0.1 0.07 0.4 0.08 0.8l0.04 0.7-0.12 0.1h-0.27c-0.31 0-0.38 0.1-0.47 0.4-0.05 0.2-0.12 0.4-0.16 0.4s-0.38 0.3-0.75 0.5c-0.38 0.3-0.68 0.5-0.68 0.5 0 0.1 0.04 0.2 0.1 0.3 0.07 0.2 0.08 0.3 0.04 0.4-0.09 0.1-0.82 0.5-0.88 0.5-0.03 0-0.12-0.2-0.19-0.5-0.08-0.2-0.16-0.4-0.18-0.5-0.06 0-0.58 0.2-0.62 0.3-0.01 0.1 0.01 0.6 0.05 1.2 0.07 0.9 0.07 1.1 0.01 1.1-0.03 0.1-0.65 0.4-1.37 0.8-0.72 0.5-1.3 0.8-1.3 0.9 0 0 0.14 0.2 0.32 0.5s0.31 0.5 0.29 0.5c-0.04 0.1-1.076 0.7-1.145 0.7-0.029 0-0.152-0.2-0.274-0.4-0.168-0.4-0.243-0.5-0.319-0.5-0.155 0-0.162 0.1-0.04 0.6l0.113 0.5 0.44 0.3c0.243 0.2 0.459 0.3 0.482 0.3 0.057 0.1-0.038 0.3-0.18 0.3-0.104 0.1-0.143 0.1-0.351 0.1-0.324-0.1-0.332-0.1-0.298 0.1s0.138 0.3 0.337 0.3c0.244 0 0.314 0 0.477 0.5 0.087 0.2 0.188 0.5 0.218 0.5 0.04 0 0.37 0.2 0.74 0.3 0.45 0.2 0.68 0.3 0.7 0.4 0.05 0.1 0.06 0.4 0.01 0.4-0.02 0-0.39-0.1-0.82-0.2s-0.79-0.1-0.806-0.1c-0.053 0-2.337-2.6-2.337-2.6 0-0.1 0.115-0.1 0.415 0 0.322 0 0.415 0 0.415-0.1 0 0-0.302-0.7-0.67-1.5l-0.669-1.4-0.018-0.4c-0.016-0.4-0.032-0.5-0.112-0.5-0.203-0.1-0.277 0-0.366 0.4l-0.086 0.4-0.61 0.4c-0.336 0.3-0.644 0.5-0.686 0.6-0.057 0-0.082 0.2-0.101 0.5l-0.024 0.5-0.439 0.2c-0.241 0-0.481 0.1-0.533 0.1-0.071 0-0.143-0.2-0.306-0.6-0.476-1.3-0.437-1.2-0.664-1.3l-0.204-0.1v-0.5c0-0.4-0.02-0.6-0.049-0.6-0.206-0.1-3.76-0.7-3.787-0.7-0.031 0.1 0.417 0.9 0.528 1 0.024 0 0.185 0 0.371-0.1l0.328-0.1 0.341 0.4c0.188 0.1 0.341 0.3 0.341 0.4 0 0-0.62 0.8-0.749 0.9-0.058 0-0.444 0.2-0.858 0.3-0.499 0.2-0.777 0.3-0.822 0.2-0.037 0-0.445-0.7-0.907-1.6-0.461-0.9-0.868-1.7-0.904-1.7-0.071-0.1-0.327-0.1-0.441 0-0.048 0-0.078 0.1-0.091 0.3l-0.019 0.4 0.591 1.2c0.581 1.1 0.596 1.1 0.888 1.4 0.469 0.3 0.688 0.5 0.771 0.4h0.658 0.551c-0.016 0.1-0.568 0.9-1.227 1.8-0.658 1-1.197 1.8-1.197 1.8 0 0.1 0.055 0.2 0.123 0.3 0.102 0.1 0.13 0.2 0.169 0.6 0.079 0.8 0.118 0.7-0.603 1.2-0.071 0.1-0.1 0.2-0.133 0.6-0.023 0.2-0.06 0.4-0.083 0.5-0.295 0.4-1.891 2.3-1.952 2.3h-0.8zm5.998-14.2c0.127 0 0.208-0.1 0.208-0.1 0-0.1-0.085-0.3-0.189-0.5-0.285-0.5-0.284-0.5-0.058-0.8 0.224-0.3 0.228-0.3 0.117-0.5-0.114-0.1-0.17-0.1-0.389 0.1l-0.193 0.2 0.044 0.8c0.043 0.8 0.078 0.9 0.196 0.9 0.031 0 0.15-0.1 0.264-0.1zm-4.519-1.1c0.344-0.3 0.324-0.3 1.41-0.2 0.389 0.1 0.725 0.1 0.747 0.1s-0.077-0.2-0.22-0.5c-0.269-0.4-0.379-0.5-0.681-0.5-0.129 0-0.139 0-0.139 0.2s-0.05 0.2-0.309 0.2c-0.125 0-0.197 0-0.378-0.2l-0.224-0.3-0.349 0.5c-0.193 0.2-0.35 0.4-0.35 0.5 0.001 0.1 0.102 0.4 0.149 0.4 0.025 0 0.18-0.1 0.344-0.2zm6.226-0.1c0.026 0 0.035-0.2 0.018-0.3l-0.03-0.2h-0.194c-0.223 0-0.249 0-0.197 0.4 0.03 0.2 0.04 0.2 0.193 0.2 0.089 0 0.184-0.1 0.21-0.1zm-36.658 13.7c-0.168-0.1-0.305-0.2-0.305-0.3 0 0 0.194-0.2 0.338-0.3l0.138-0.1 0.3 0.1c0.165 0.2 0.314 0.3 0.33 0.3 0.034 0.1-0.304 0.5-0.421 0.5-0.041 0-0.212-0.1-0.38-0.2zm33.196-0.5c-0.261-0.2-0.484-0.4-0.496-0.4-0.022-0.1 0.218-1 0.286-1.1 0.055-0.1 1.005-0.8 1.063-0.8 0.108 0 0.378 0.2 0.378 0.3s-0.635 2.2-0.699 2.2c-0.044 0.1-0.17 0-0.532-0.2zm-34.574-0.4c-0.174-0.1-0.314-0.3-0.311-0.3 0.008-0.1 0.455-0.7 0.51-0.7 0.063 0 0.731 0.9 0.704 0.9-0.04 0.1-0.451 0.3-0.521 0.3-0.036 0-0.208-0.1-0.382-0.2zm52.644-2.7c-0.84-0.2-1.55-0.4-1.57-0.4-0.05-0.1-0.14-1.1-0.1-1.1 0.04-0.1 3.1 0.7 3.18 0.7 0.05 0.1 0.29 0.9 0.29 1 0 0.2-0.09 0.1-1.8-0.2zm-3.61-0.7c-0.06 0-0.11-0.1-0.11-0.1s0.5-1.1 0.54-1.1c0.05-0.1 0.56 0 0.61 0.1 0.02 0-0.11 0.3-0.28 0.6-0.3 0.5-0.3 0.5-0.47 0.5h-0.29zm-1.53-0.2c-0.26-0.1-0.48-0.1-0.49-0.2-0.01 0 0-0.2 0.02-0.5l0.04-0.5 0.5-0.5c0.27-0.2 0.53-0.4 0.56-0.4 0.07 0 0.74 0.9 0.74 1 0 0-0.14 0.3-0.31 0.6-0.36 0.7-0.33 0.7-1.06 0.5zm-34.155-4-0.969-0.3 0.028-0.2c0.015-0.1 0.048-0.2 0.072-0.2 0.027 0 0.416 0.1 0.99 0.4 0.52 0.2 1.019 0.4 1.11 0.4 0.142 0.1 0.156 0.1 0.097 0.2-0.154 0.1-0.343 0.1-1.328-0.3zm-16.687-0.3c-0.285-0.2-0.543-0.3-0.573-0.3s-0.193 0-0.361 0.1c-0.167 0.1-0.341 0.2-0.384 0.2-0.109 0-1.734-1-1.766-1-0.029-0.1 0.066-0.4 0.126-0.5 0.021 0 0.474 0.2 1.007 0.4 0.532 0.2 0.997 0.4 1.032 0.4s0.217-0.1 0.403-0.2c0.187-0.1 0.369-0.2 0.404-0.2 0.095 0 0.962 0.9 0.962 0.9 0 0.1-0.233 0.5-0.29 0.5-0.023 0-0.275-0.1-0.56-0.3zm14.462-0.3c-0.307-0.1-0.576-0.2-0.598-0.2-0.046 0 0.046-0.5 0.107-0.5 0.046-0.1 1.175 0.3 1.238 0.3 0.05 0.1-0.046 0.4-0.13 0.4-0.036 0.1-0.264 0.1-0.617 0zm41.63-1.3c-0.12-0.4-0.21-0.8-0.19-0.8h0.16c0.09 0 0.22 0.2 0.48 0.6 0.19 0.2 0.35 0.5 0.35 0.5 0.01 0-0.46 0.4-0.52 0.4-0.03 0-0.15-0.3-0.28-0.7zm-40.766 0.4c-0.223-0.2-0.232-0.2-0.232-0.4 0-0.1 0.019-0.2 0.043-0.2 0.04 0 0.413 0.4 0.474 0.6 0.04 0.1-0.01 0.1-0.285 0zm-19.976-0.4c-0.062-0.1-0.402-0.8-0.402-0.9s0.13 0 0.706 0.2c0.311 0.1 0.558 0.2 0.549 0.2-0.016 0.1-0.707 0.5-0.774 0.5h-0.079zm58.792-1c-0.12-0.2-0.22-0.3-0.21-0.3 0.01-0.1 0.37-0.3 0.79-0.5 0.43-0.3 0.8-0.5 0.83-0.5 0.04 0 0.18-0.4 0.32-0.8s0.28-0.8 0.31-0.8c0.05 0 0.16 0 0.5 0.2 0.24 0.2 0.44 0.3 0.45 0.3 0.02 0.1-0.85 1.5-1.01 1.7-0.06 0.1-1.65 0.9-1.73 0.9-0.01 0-0.12-0.1-0.25-0.2zm-22.397-1.2c-0.057 0-0.118-0.1-0.135-0.1-0.033 0 0.165-0.4 0.229-0.4 0.044 0 0.106 0.2 0.155 0.4 0.029 0.1 0.021 0.1-0.055 0.1h-0.194zm25.757-1.9c-0.11-0.1-0.12-0.2-0.06-0.2 0.08-0.1 1.04-0.5 1.12-0.5s0.43 0.3 0.43 0.3c0 0.1-1.17 0.6-1.3 0.6-0.03 0-0.12-0.1-0.19-0.2zm-30.06-1.4c-0.138-0.1-0.25-0.3-0.25-0.3 0-0.1 0.388-0.7 0.453-0.7 0.032 0 0.173 0.1 0.312 0.3 0.183 0.2 0.241 0.3 0.211 0.4-0.067 0.1-0.395 0.5-0.437 0.5-0.021 0-0.151-0.1-0.289-0.2zm1.086 0c-0.014 0 0.03-0.2 0.099-0.3 0.159-0.3 0.158-0.4-0.025-0.5-0.083-0.1-0.24-0.3-0.349-0.4l-0.198-0.2 0.26-0.3c0.18-0.2 0.278-0.3 0.317-0.2 0.031 0 0.116 0.2 0.19 0.4 0.121 0.3 0.172 0.3 0.501 0.6l0.366 0.3-0.034 0.3c-0.019 0.2-0.06 0.3-0.09 0.3-0.031 0.1-0.271 0.1-0.533 0.1-0.365 0-0.484 0-0.504-0.1zm-34.816-2.5c-0.052 0-0.039-3 0.013-3 0.026 0 0.778 0.3 1.671 0.6l1.625 0.7 0.18 0.2c0.099 0.2 0.182 0.3 0.183 0.4h-1.229c-1.176 0-1.242 0-1.463 0.1-0.128 0-0.232 0.1-0.232 0.1s0.113 0.2 0.251 0.3c0.139 0.1 0.239 0.3 0.225 0.3s-0.267 0.1-0.58 0.2c-0.611 0.2-0.598 0.2-0.644 0.1zm26.812 0c-0.143 0-0.204-0.1-0.737-0.9-0.32-0.5-0.596-1-0.612-1-0.017 0-0.139-0.6-0.272-1.3-0.132-0.6-0.252-1.2-0.266-1.2-0.054-0.1-0.95-0.8-1.016-0.8-0.038 0-0.264 0.1-0.502 0.2-0.239 0.1-0.46 0.1-0.493 0.1-0.075 0-0.556-0.6-0.556-0.7s1.683-2.2 1.774-2.2c0.075-0.1 7.17-0.9 7.32-0.9 0.137 0 1.808 1.3 1.808 1.4s-0.186 0.3-0.414 0.5-0.43 0.3-0.447 0.4c-0.018 0-0.069 0.5-0.113 1s-0.101 1-0.126 1c-0.025 0.1-0.366 0.6-0.757 1.2-0.655 1.1-0.725 1.1-0.89 1.2-0.099 0-0.63 0.2-1.18 0.4l-1 0.3-0.288 0.7-0.288 0.6h-0.395-0.55zm4.94-0.8c-0.235-0.4-0.398-0.7-0.375-0.7 0.065 0 1.53-0.4 1.588-0.4 0.138 0.1 0.661 0.6 0.661 0.7 0 0-1.234 0.9-1.385 1-0.051 0-0.195-0.2-0.489-0.6z" />
+            <g fill="#e67e22">
+              <path
+                d="m22 1038.2c0 0.2-0.104 0.4-0.312 0.6l-4.363 4.2 1.033 6.1c0.008 0 0.012 0.1 0.012 0.2 0 0.2-0.044 0.3-0.132 0.4-0.08 0.1-0.2 0.2-0.361 0.2-0.152 0-0.312 0-0.48-0.1l-5.397-2.9-5.3966 2.9c-0.1763 0.1-0.3366 0.1-0.4808 0.1-0.1683 0-0.2965-0.1-0.3846-0.2-0.0802-0.1-0.1202-0.2-0.1202-0.4 0 0 0.008-0.1 0.024-0.2l1.0337-6.1-4.375-4.2c-0.2003-0.2-0.3005-0.4-0.3005-0.6 0-0.3 0.2244-0.5 0.6731-0.5l6.0336-0.9 2.7043-5.5c0.152-0.3 0.349-0.5 0.589-0.5s0.437 0.2 0.589 0.5l2.704 5.5 6.034 0.9c0.449 0 0.673 0.2 0.673 0.5"
+                fill="#e67e22" />
+            </g>
+            <g fill="#f1c40f">
+              <path
+                d="m22 1037.2c0 0.2-0.104 0.4-0.312 0.6l-4.363 4.2 1.033 6.1c0.008 0 0.012 0.1 0.012 0.2 0 0.2-0.044 0.3-0.132 0.4-0.08 0.1-0.2 0.2-0.361 0.2-0.152 0-0.312 0-0.48-0.1l-5.397-2.9-5.3966 2.9c-0.1763 0.1-0.3366 0.1-0.4808 0.1-0.1683 0-0.2965-0.1-0.3846-0.2-0.0802-0.1-0.1202-0.2-0.1202-0.4 0 0 0.008-0.1 0.024-0.2l1.0337-6.1-4.375-4.2c-0.2003-0.2-0.3005-0.4-0.3005-0.6 0-0.3 0.2244-0.5 0.6731-0.5l6.0336-0.9 2.7043-5.5c0.152-0.3 0.349-0.5 0.589-0.5s0.437 0.2 0.589 0.5l2.704 5.5 6.034 0.9c0.449 0 0.673 0.2 0.673 0.5"
+                fill="#f1c40f" />
+            </g>
+          </g>
+        </svg>
+        محبوب‌ترین برندها
+      </h4>
+      <div class="fav-brand-wrapper">
+        <div class="swiper fav-brand-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="fav-brand-box border-start">
+                <a href="/" class="d-block text-center">
+                  <img src="./assets/images/brand.png" class="img-fluid" width="110" height="110" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="fav-brand-box border-start">
+                <a href="/" class="d-block text-center">
+                  <img src="./assets/images/br1.png" class="img-fluid" width="110" height="110" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="fav-brand-box border-start">
+                <a href="/" class="d-block text-center">
+                  <img src="./assets/images/br2.png" class="img-fluid" width="110" height="110" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="fav-brand-box border-start">
+                <a href="/" class="d-block text-center">
+                  <img src="./assets/images/brand.png" class="img-fluid" width="110" height="110" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="fav-brand-box border-start">
+                <a href="/" class="d-block text-center">
+                  <img src="./assets/images/br1.png" class="img-fluid" width="110" height="110" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="fav-brand-box border-start">
+                <a href="/" class="d-block text-center">
+                  <img src="./assets/images/br2.png" class="img-fluid" width="110" height="110" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="fav-brand-box border-start">
+                <a href="/" class="d-block text-center">
+                  <img src="./assets/images/brand.png" class="img-fluid" width="110" height="110" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="fav-brand-box border-start">
+                <a href="/" class="d-block text-center">
+                  <img src="./assets/images/br1.png" class="img-fluid" width="110" height="110" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="fav-brand-box border-start">
+                <a href="/" class="d-block text-center">
+                  <img src="./assets/images/br2.png" class="img-fluid" width="110" height="110" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Off Banner -->
+    <div class="container mb-5">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <a href="/" class="d-block off-banner overflow-hidden">
+            <img src="./assets/images/b3.jpg" alt="" srcset="" class="img-fluid w-100">
+          </a>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <a href="/" class="d-block off-banner overflow-hidden">
+            <img src="./assets/images/b4.jpg" alt="" srcset="" class="img-fluid w-100">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Digi Plus -->
+    <div class="container mb-5">
+      <div class="digiplus row p-4 rounded-3">
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <div>
+            <a href="/" class="d-block">
+              <img src="./assets/images/digiplus-logo.svg" alt="" class="mb-3">
+            </a>
+            <p class="text-white mb-3">خدمات ویژه برای اعضای دیجی‌پلاس</p>
+            <a href="/" class="text-white border py-2 px-3 d-inline-block rounded-3">عضویت <svg width="20" height="20"
+                viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <g data-name="Layer 2" id="Layer_2">
+                  <path fill="#fff"
+                    d="M10.1,23a1,1,0,0,0,0-1.41L5.5,17H29.05a1,1,0,0,0,0-2H5.53l4.57-4.57A1,1,0,0,0,8.68,9L2.32,15.37a.9.9,0,0,0,0,1.27L8.68,23A1,1,0,0,0,10.1,23Z">
+                  </path>
+                </g>
+              </svg></a>
+          </div>
+
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <div class="digiplus-box bg-white p-3 rounded-3">
+            <div class="title-digiplus d-flex justify-content-between align-items-center mb-4">
+              <strong>
+                <svg width="22" height="22" enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512"
+                  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Layer_1" />
+                  <g id="Layer_2">
+                    <g>
+                      <path fill="#941B80"
+                        d="M400.2,170.1h-89.4c13.9-10,22.5-23.7,23.6-36.9c1.2-13.9-6.6-30.3-31.7-34.5c-2.8-0.5-5.6-0.7-8.3-0.7    c-10.9,0-19.9,4-26.7,11.8c-6.4,7.3-9.9,17.2-11.8,27.2c-1.9-10-5.5-20-11.8-27.2C237.4,102,228.4,98,217.5,98    c-2.6,0-5.4,0.2-8.3,0.7c-25.1,4.2-32.8,20.6-31.7,34.5c1.1,13.2,9.8,26.9,23.6,36.9h-89.4c-12.5,0-22.6,10.1-22.6,22.6V207    c0,12.5,10.1,22.6,22.6,22.6h6.6v156.4c0,15.5,12.6,28.1,28.1,28.1h219.1c15.5,0,28.1-12.6,28.1-28.1V229.6h6.6    c12.5,0,22.6-10.1,22.6-22.6v-14.3C422.8,180.2,412.7,170.1,400.2,170.1z M279.1,119.6c3.9-4.5,8.9-6.6,15.4-6.6    c1.8,0,3.8,0.2,5.8,0.5c7.6,1.3,20.3,5.4,19.2,18.5c-1.2,14.5-19.6,35.1-50.2,37.8C268.3,155.7,269,131.3,279.1,119.6z M192.5,132    c-1.1-13.1,11.6-17.2,19.2-18.5c2-0.3,4-0.5,5.8-0.5c6.5,0,11.5,2.2,15.4,6.6c10.1,11.6,10.8,36,9.8,50.2    C212.1,167.1,193.7,146.5,192.5,132z M378.6,385.9c0,7.2-5.9,13.1-13.1,13.1H146.4c-7.2,0-13.1-5.9-13.1-13.1V229.6h245.2V385.9z     M407.8,207c0,4.2-3.4,7.6-7.6,7.6h-14.1H125.9h-14.1c-4.2,0-7.6-3.4-7.6-7.6v-14.3c0-4.2,3.4-7.6,7.6-7.6h288.4    c4.2,0,7.6,3.4,7.6,7.6V207z" />
+                      <path fill="#941B80"
+                        d="M216.8,301.9c14.8,0,26.8-12,26.8-26.8c0-14.8-12-26.8-26.8-26.8s-26.8,12-26.8,26.8C190,289.9,202,301.9,216.8,301.9z     M216.8,263.3c6.5,0,11.8,5.3,11.8,11.8s-5.3,11.8-11.8,11.8s-11.8-5.3-11.8-11.8S210.3,263.3,216.8,263.3z" />
+                      <path fill="#941B80"
+                        d="M295.2,326.6c-14.8,0-26.8,12-26.8,26.8s12,26.8,26.8,26.8s26.8-12,26.8-26.8S310,326.6,295.2,326.6z M295.2,365.3    c-6.5,0-11.8-5.3-11.8-11.8s5.3-11.8,11.8-11.8s11.8,5.3,11.8,11.8S301.7,365.3,295.2,365.3z" />
+                      <path fill="#941B80"
+                        d="M197.4,372.9c1.5,1.5,3.4,2.2,5.3,2.2s3.8-0.7,5.3-2.2l106.6-106.6c2.9-2.9,2.9-7.7,0-10.6c-2.9-2.9-7.7-2.9-10.6,0    L197.4,362.3C194.4,365.2,194.4,370,197.4,372.9z" />
+                    </g>
+                  </g>
+                </svg>
+                <span>هدیه نقدی</span>
+              </strong>
+              <a href="/">مشاهده همه</a>
+            </div>
+            <div class="digiplus-items">
+              <a href="/" class="d-block">
+                <img src="./assets/images/p1.jpg" alt="" srcset="" class="img-fluid" width="116" height="116">
+              </a>
+              <a href="/" class="d-block">
+                <img src="./assets/images/p2.jpg" alt="" srcset="" class="img-fluid" width="116" height="116">
+              </a>
+              <a href="/" class="d-block">
+                <img src="./assets/images/p3.jpg" alt="" srcset="" class="img-fluid" width="116" height="116">
+              </a>
+              <a href="/" class="d-block">
+                <img src="./assets/images/p4.jpg" alt="" srcset="" class="img-fluid" width="116" height="116">
+              </a>
+              <a href="/" class="d-block">
+                <img src="./assets/images/p5.jpg" alt="" srcset="" class="img-fluid" width="116" height="116">
+              </a>
+              <a href="/" class="d-block">
+                <img src="./assets/images/p6.jpg" alt="" srcset="" class="img-fluid" width="116" height="116">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <div class="digiplus-box bg-white p-3 rounded-3">
+            <div class="title-digiplus d-flex justify-content-between align-items-center mb-4">
+              <strong>
+                <svg width="22" height="22" enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512"
+                  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Layer_1" />
+                  <g id="Layer_2">
+                    <g>
+                      <path fill="#941B80"
+                        d="M400.2,170.1h-89.4c13.9-10,22.5-23.7,23.6-36.9c1.2-13.9-6.6-30.3-31.7-34.5c-2.8-0.5-5.6-0.7-8.3-0.7    c-10.9,0-19.9,4-26.7,11.8c-6.4,7.3-9.9,17.2-11.8,27.2c-1.9-10-5.5-20-11.8-27.2C237.4,102,228.4,98,217.5,98    c-2.6,0-5.4,0.2-8.3,0.7c-25.1,4.2-32.8,20.6-31.7,34.5c1.1,13.2,9.8,26.9,23.6,36.9h-89.4c-12.5,0-22.6,10.1-22.6,22.6V207    c0,12.5,10.1,22.6,22.6,22.6h6.6v156.4c0,15.5,12.6,28.1,28.1,28.1h219.1c15.5,0,28.1-12.6,28.1-28.1V229.6h6.6    c12.5,0,22.6-10.1,22.6-22.6v-14.3C422.8,180.2,412.7,170.1,400.2,170.1z M279.1,119.6c3.9-4.5,8.9-6.6,15.4-6.6    c1.8,0,3.8,0.2,5.8,0.5c7.6,1.3,20.3,5.4,19.2,18.5c-1.2,14.5-19.6,35.1-50.2,37.8C268.3,155.7,269,131.3,279.1,119.6z M192.5,132    c-1.1-13.1,11.6-17.2,19.2-18.5c2-0.3,4-0.5,5.8-0.5c6.5,0,11.5,2.2,15.4,6.6c10.1,11.6,10.8,36,9.8,50.2    C212.1,167.1,193.7,146.5,192.5,132z M378.6,385.9c0,7.2-5.9,13.1-13.1,13.1H146.4c-7.2,0-13.1-5.9-13.1-13.1V229.6h245.2V385.9z     M407.8,207c0,4.2-3.4,7.6-7.6,7.6h-14.1H125.9h-14.1c-4.2,0-7.6-3.4-7.6-7.6v-14.3c0-4.2,3.4-7.6,7.6-7.6h288.4    c4.2,0,7.6,3.4,7.6,7.6V207z" />
+                      <path fill="#941B80"
+                        d="M216.8,301.9c14.8,0,26.8-12,26.8-26.8c0-14.8-12-26.8-26.8-26.8s-26.8,12-26.8,26.8C190,289.9,202,301.9,216.8,301.9z     M216.8,263.3c6.5,0,11.8,5.3,11.8,11.8s-5.3,11.8-11.8,11.8s-11.8-5.3-11.8-11.8S210.3,263.3,216.8,263.3z" />
+                      <path fill="#941B80"
+                        d="M295.2,326.6c-14.8,0-26.8,12-26.8,26.8s12,26.8,26.8,26.8s26.8-12,26.8-26.8S310,326.6,295.2,326.6z M295.2,365.3    c-6.5,0-11.8-5.3-11.8-11.8s5.3-11.8,11.8-11.8s11.8,5.3,11.8,11.8S301.7,365.3,295.2,365.3z" />
+                      <path fill="#941B80"
+                        d="M197.4,372.9c1.5,1.5,3.4,2.2,5.3,2.2s3.8-0.7,5.3-2.2l106.6-106.6c2.9-2.9,2.9-7.7,0-10.6c-2.9-2.9-7.7-2.9-10.6,0    L197.4,362.3C194.4,365.2,194.4,370,197.4,372.9z" />
+                    </g>
+                  </g>
+                </svg>
+                <span>هدیه نقدی</span>
+              </strong>
+              <a href="/">ارسال فوری</a>
+            </div>
+            <div class="digiplus-items">
+              <a href="/" class="d-block">
+                <img src="./assets/images/p1.jpg" alt="" srcset="" class="img-fluid" width="116" height="116">
+              </a>
+              <a href="/" class="d-block">
+                <img src="./assets/images/p2.jpg" alt="" srcset="" class="img-fluid" width="116" height="116">
+              </a>
+              <a href="/" class="d-block">
+                <img src="./assets/images/p3.jpg" alt="" srcset="" class="img-fluid" width="116" height="116">
+              </a>
+              <a href="/" class="d-block">
+                <img src="./assets/images/p4.jpg" alt="" srcset="" class="img-fluid" width="116" height="116">
+              </a>
+              <a href="/" class="d-block">
+                <img src="./assets/images/p5.jpg" alt="" srcset="" class="img-fluid" width="116" height="116">
+              </a>
+              <a href="/" class="d-block">
+                <img src="./assets/images/p6.jpg" alt="" srcset="" class="img-fluid" width="116" height="116">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Baby Banner -->
+    <div class="container mb-5">
+      <div class="baby-banner">
+        <img src="./assets/images/ba1.jpg" class="img-fluid rounded-3" alt="" srcset="">
+      </div>
+    </div>
+    <!-- Weblog -->
+    <div class="container mb-5">
+      <div class="title-blogs d-flex align-items-center justify-content-between mb-4">
+        <h5 class="fs-6">خواندنی‌ها</h5>
+        <a href="" class="text-info">مطالب بیشتر در دیجی‌کالا مگ</a>
+      </div>
+      <div class="blogs row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="blog h-100 border rounded-3 overflow-hidden">
+            <a href="" class="d-block">
+              <div class="img-blog">
+                <img src="./assets/images/blog1.jpg" alt="" class="img-fluid">
+              </div>
+              <span class="p-3 d-block">۴ نکته‌ی مهم که قبل از خرید انواع ساپورت‌های طبی‌ باید بدانید</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="blog h-100 border rounded-3 overflow-hidden">
+            <a href="" class="d-block">
+              <div class="img-blog">
+                <img src="./assets/images/blog2.jpg" alt="" class="img-fluid">
+              </div>
+              <span class="p-3 d-block">اگر زیاد به مانیتور نگاه می‌کنید، شاید عینک بلو لایت نجات‌بخش شما باشد</span>
+            </a>
+          </div>
+
+        </div>
+        
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="blog h-100 border rounded-3 overflow-hidden">
+            <a href="" class="d-block">
+              <div class="img-blog">
+                <img src="./assets/images/blog3.jpg" alt="" class="img-fluid">
+              </div>
+              <span class="p-3 d-block">مشخصات شیائومی پوکو F5 فاش شد</span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="blog h-100 border rounded-3 overflow-hidden">
+            <a href="" class="d-block">
+              <div class="img-blog">
+                <img src="./assets/images/blog4.jpg" alt="" class="img-fluid">
+              </div>
+              <span class="p-3 d-block">نسل بعدی گوشی تاشو موتورولا ریزر با نمایشگر بیرونی بزرگ‌تری عرضه می‌شود</span>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-start mb-5 gap-3">
+        <div class="digi-support">
+          <img src="./assets/images/digi.svg" alt="" srcset="" class="img-fluid mb-3">
+          <p>
+            <span class="border-start ps-3 ms-3">تلفن پشتیبانی 021 - 254687</span>
+            <span>7 روز هفته، 24 ساعته پاسخگوی شما هستیم</span>
+          </p>
+
+        </div>
+        <a href="#" class="text-body border px-3 py-2 d-block rounded-3 go-top">بازگشت به بالا</a>
+      </div>
+      <div class="digi-option d-flex align-items-center justify-content-around mb-5 flex-wrap">
+        <div class="option-box text-center">
+          <img src="./assets/images/express-delivery.svg" alt="" srcset="" class="img-fluid" width="56" height="56">
+          <p>امکان تحویل اکسپرس</p>
+        </div>
+        <div class="option-box text-center">
+          <img src="./assets/images/cash-on-delivery.svg" alt="" srcset="" class="img-fluid" width="56" height="56">
+          <p>پرداخت در محل</p>
+        </div>
+        <div class="option-box text-center">
+          <img src="./assets/images/support.svg" alt="" srcset="" class="img-fluid" width="56" height="56">
+          <p>7 روز هفته</p>
+        </div>
+        <div class="option-box text-center">
+          <img src="./assets/images/days-return.svg" alt="" srcset="" class="img-fluid" width="56" height="56">
+          <p>7 روز ضمانت</p>
+        </div>
+        <div class="option-box text-center">
+          <img src="./assets/images/original-products.svg" alt="" srcset="" class="img-fluid" width="56" height="56">
+          <p>ضمانت اصل بودن</p>
+        </div>
+
+      </div>
+      <div class="menu-footer mb-5">
+        <div class="row flex-wrap gap-4">
+          <div class="col">
+            <strong>با دیجی کالا</strong>
+            <ul>
+              <li><a href="/">منوی اول</a></li>
+              <li><a href="/">منوی دوم</a></li>
+              <li><a href="/">منوی سوم</a></li>
+              <li><a href="/">منوی چهارم</a></li>
+              <li><a href="/">منوی چهارم</a></li>
+              <li><a href="/">منوی چهارم</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <strong>با دیجی کالا</strong>
+            <ul>
+              <li><a href="/">منوی اول</a></li>
+              <li><a href="/">منوی دوم</a></li>
+              <li><a href="/">منوی سوم</a></li>
+              <li><a href="/">منوی چهارم</a></li>
+              <li><a href="/">منوی چهارم</a></li>
+              <li><a href="/">منوی چهارم</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <strong>با دیجی کالا</strong>
+            <ul>
+              <li><a href="/">منوی اول</a></li>
+              <li><a href="/">منوی دوم</a></li>
+              <li><a href="/">منوی سوم</a></li>
+              <li><a href="/">منوی چهارم</a></li>
+              <li><a href="/">منوی چهارم</a></li>
+              <li><a href="/">منوی چهارم</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <div class="social">
+              <strong class="d-block mb-4">همراه ما باشید!</strong>
+              <ul class="d-flex align-items-center gap-4 mb-5">
+                <li><a href="/"><svg width="30px" height="30px" enable-background="new 0 0 128 128" id="Social_Icons"
+                      version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <g id="_x37__stroke">
+                        <g id="Instagram_1_">
+                          <rect clip-rule="evenodd" fill="none" fill-rule="evenodd" height="128" width="128"></rect>
+                          <path clip-rule="evenodd"
+                            d="M105.843,29.837    c0,4.242-3.439,7.68-7.68,7.68c-4.241,0-7.68-3.438-7.68-7.68c0-4.242,3.439-7.68,7.68-7.68    C102.405,22.157,105.843,25.595,105.843,29.837z M64,85.333c-11.782,0-21.333-9.551-21.333-21.333    c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333C85.333,75.782,75.782,85.333,64,85.333z M64,31.135    c-18.151,0-32.865,14.714-32.865,32.865c0,18.151,14.714,32.865,32.865,32.865c18.151,0,32.865-14.714,32.865-32.865    C96.865,45.849,82.151,31.135,64,31.135z M64,11.532c17.089,0,19.113,0.065,25.861,0.373c6.24,0.285,9.629,1.327,11.884,2.204    c2.987,1.161,5.119,2.548,7.359,4.788c2.24,2.239,3.627,4.371,4.788,7.359c0.876,2.255,1.919,5.644,2.204,11.884    c0.308,6.749,0.373,8.773,0.373,25.862c0,17.089-0.065,19.113-0.373,25.861c-0.285,6.24-1.327,9.629-2.204,11.884    c-1.161,2.987-2.548,5.119-4.788,7.359c-2.239,2.24-4.371,3.627-7.359,4.788c-2.255,0.876-5.644,1.919-11.884,2.204    c-6.748,0.308-8.772,0.373-25.861,0.373c-17.09,0-19.114-0.065-25.862-0.373c-6.24-0.285-9.629-1.327-11.884-2.204    c-2.987-1.161-5.119-2.548-7.359-4.788c-2.239-2.239-3.627-4.371-4.788-7.359c-0.876-2.255-1.919-5.644-2.204-11.884    c-0.308-6.749-0.373-8.773-0.373-25.861c0-17.089,0.065-19.113,0.373-25.862c0.285-6.24,1.327-9.629,2.204-11.884    c1.161-2.987,2.548-5.119,4.788-7.359c2.239-2.24,4.371-3.627,7.359-4.788c2.255-0.876,5.644-1.919,11.884-2.204    C44.887,11.597,46.911,11.532,64,11.532z M64,0C46.619,0,44.439,0.074,37.613,0.385C30.801,0.696,26.148,1.778,22.078,3.36    c-4.209,1.635-7.778,3.824-11.336,7.382C7.184,14.3,4.995,17.869,3.36,22.078c-1.582,4.071-2.664,8.723-2.975,15.535    C0.074,44.439,0,46.619,0,64c0,17.381,0.074,19.561,0.385,26.387c0.311,6.812,1.393,11.464,2.975,15.535    c1.635,4.209,3.824,7.778,7.382,11.336c3.558,3.558,7.127,5.746,11.336,7.382c4.071,1.582,8.723,2.664,15.535,2.975    C44.439,127.926,46.619,128,64,128c17.381,0,19.561-0.074,26.387-0.385c6.812-0.311,11.464-1.393,15.535-2.975    c4.209-1.636,7.778-3.824,11.336-7.382c3.558-3.558,5.746-7.127,7.382-11.336c1.582-4.071,2.664-8.723,2.975-15.535    C127.926,83.561,128,81.381,128,64c0-17.381-0.074-19.561-0.385-26.387c-0.311-6.812-1.393-11.464-2.975-15.535    c-1.636-4.209-3.824-7.778-7.382-11.336c-3.558-3.558-7.127-5.746-11.336-7.382c-4.071-1.582-8.723-2.664-15.535-2.975    C83.561,0.074,81.381,0,64,0z"
+                            fill="#9fa4ae" fill-rule="evenodd" id="Instagram"></path>
+                        </g>
+                      </g>
+                    </svg></a></li>
+
+                <li><a href="/"><svg height="30px" fill="#9fa4ae"
+                      style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
+                      version="1.1" viewBox="0 0 512 512" width="30px" xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/"
+                      xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <rect height="400" style="fill:none;" width="400" x="56" y="56"></rect>
+                      <path
+                        d="M161.014,464.013c193.208,0 298.885,-160.071 298.885,-298.885c0,-4.546 0,-9.072 -0.307,-13.578c20.558,-14.871 38.305,-33.282 52.408,-54.374c-19.171,8.495 -39.51,14.065 -60.334,16.527c21.924,-13.124 38.343,-33.782 46.182,-58.102c-20.619,12.235 -43.18,20.859 -66.703,25.498c-19.862,-21.121 -47.602,-33.112 -76.593,-33.112c-57.682,0 -105.145,47.464 -105.145,105.144c0,8.002 0.914,15.979 2.722,23.773c-84.418,-4.231 -163.18,-44.161 -216.494,-109.752c-27.724,47.726 -13.379,109.576 32.522,140.226c-16.715,-0.495 -33.071,-5.005 -47.677,-13.148l0,1.331c0.014,49.814 35.447,93.111 84.275,102.974c-15.464,4.217 -31.693,4.833 -47.431,1.802c13.727,42.685 53.311,72.108 98.14,72.95c-37.19,29.227 -83.157,45.103 -130.458,45.056c-8.358,-0.016 -16.708,-0.522 -25.006,-1.516c48.034,30.825 103.94,47.18 161.014,47.104">
+                      </path>
+                    </svg></a></li>
+
+                <li><a href="/"><svg enable-background="new 0 0 32 32" height="30px" id="Layer_1" version="1.0"
+                      viewBox="0 0 32 32" width="30px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <g>
+                        <rect fill="#9fa4ae" height="23" width="7" y="9"></rect>
+                        <path
+                          d="M24.003,9C20,9,18.89,10.312,18,12V9h-7v23h7V19c0-2,0-4,3.5-4s3.5,2,3.5,4v13h7V19C32,13,31,9,24.003,9z"
+                          fill="#9fa4ae"></path>
+                        <circle cx="3.5" cy="3.5" fill="#9fa4ae" r="3.5"></circle>
+                      </g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                    </svg></a></li>
+
+                <li><a href="/"><svg width="30" height="30" viewBox="0 0 396 396" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M175.925 11.9166L130.977 1.77078C94.3107 -6.51047 57.8837 16.4999 49.6024 53.1666L39.3628 98.4895C68.8628 51.6458 118.384 18.7083 175.925 11.9166ZM11.9149 220.073L1.76907 265.021C-6.51218 301.687 16.4982 338.115 53.1649 346.396L98.4878 356.635C51.6441 327.125 18.7066 277.615 11.9149 220.073ZM342.832 49.6041L297.509 39.3645C344.352 68.8645 377.29 118.385 384.082 175.917L394.227 130.969C402.509 94.3229 379.498 57.8854 342.832 49.6041ZM220.071 384.083L265.019 394.229C301.686 402.51 338.113 379.5 346.394 342.833L356.634 297.51C327.134 344.354 277.613 377.292 220.071 384.083Z"
+                        fill="#9fa4ae"></path>
+                      <path
+                        d="M197.999 31.3333C105.947 31.3333 31.332 105.948 31.332 198C31.332 290.052 105.947 364.667 197.999 364.667C290.051 364.667 364.665 290.052 364.665 198C364.665 105.948 290.051 31.3333 197.999 31.3333ZM156.332 83.4166C179.342 83.4166 197.999 102.073 197.999 125.083C197.999 148.094 179.342 166.75 156.332 166.75C133.322 166.75 114.665 148.094 114.665 125.083C114.665 102.073 133.322 83.4166 156.332 83.4166ZM125.082 281.333C102.072 281.333 83.4154 262.677 83.4154 239.667C83.4154 216.656 102.072 198 125.082 198C148.092 198 166.749 216.656 166.749 239.667C166.749 262.677 148.092 281.333 125.082 281.333ZM177.165 198C177.165 186.49 186.488 177.167 197.999 177.167C209.509 177.167 218.832 186.49 218.832 198C218.832 209.51 209.509 218.833 197.999 218.833C186.488 218.833 177.165 209.51 177.165 198ZM239.665 312.583C216.655 312.583 197.999 293.927 197.999 270.917C197.999 247.906 216.655 229.25 239.665 229.25C262.676 229.25 281.332 247.906 281.332 270.917C281.332 293.927 262.676 312.583 239.665 312.583ZM270.915 198C247.905 198 229.249 179.344 229.249 156.333C229.249 133.323 247.905 114.667 270.915 114.667C293.926 114.667 312.582 133.323 312.582 156.333C312.582 179.344 293.926 198 270.915 198Z"
+                        fill="#9fa4ae"></path>
+                    </svg></a></li>
+              </ul>
+              <div class="email-form">
+                <p><strong>با ثبت ایمیل از جدیدترین ها باخبر شوید</strong></p>
+                <div class="newsletter">
+                  <input type="email" name="" id="" placeholder="ایمیل شما">
+                  <input type="submit" value="ثبت">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="buss-digi p-4">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
+          <a href="/" class="brands-digi text-center d-flex align-items-center justify-content-center">
+            <img src="./assets/images/digiMehr.svg" alt="" class="img-fluid" width="95" height="25">
+          </a>
+          <a href="/" class="brands-digi text-center d-flex align-items-center justify-content-center">
+            <img src="./assets/images/magnet.svg" alt="" class="img-fluid" width="95" height="25">
+          </a>
+          <a href="/" class="brands-digi text-center d-flex align-items-center justify-content-center">
+            <img src="./assets/images/jet.svg" alt="" class="img-fluid" width="95" height="25">
+          </a>
+          <a href="/" class="brands-digi text-center d-flex align-items-center justify-content-center">
+            <img src="./assets/images/digiclub.svg" alt="" class="img-fluid" width="95" height="25">
+          </a>
+          <a href="/" class="brands-digi text-center d-flex align-items-center justify-content-center">
+            <img src="./assets/images/digiplus.svg" alt="" class="img-fluid" width="95" height="25">
+          </a>
+          <a href="/" class="brands-digi text-center d-flex align-items-center justify-content-center">
+            <img src="./assets/images/digistyle.svg" alt="" class="img-fluid" width="95" height="25">
+          </a>
+          <a href="/" class="brands-digi text-center d-flex align-items-center justify-content-center">
+            <img src="./assets/images/digipay.svg" alt="" class="img-fluid" width="95" height="25">
+          </a>
+          <a href="/" class="brands-digi text-center d-flex align-items-center justify-content-center">
+            <img src="./assets/images/digimag.svg" alt="" class="img-fluid" width="95" height="25">
+          </a>
+        </div>
+        <div class="d-flex flex-wrap align-items-center justify-content-between">
+          <a href="/" class="brands-digi text-center d-flex align-items-center justify-content-center">
+            <img src="./assets/images/digiMehr.svg" alt="" class="img-fluid" width="95" height="25">
+          </a>
+          <a href="/" class="brands-digi text-center d-flex align-items-center justify-content-center">
+            <img src="./assets/images/magnet.svg" alt="" class="img-fluid" width="95" height="25">
+          </a>
+          <a href="/" class="brands-digi text-center d-flex align-items-center justify-content-center">
+            <img src="./assets/images/jet.svg" alt="" class="img-fluid" width="95" height="25">
+          </a>
+          <a href="/" class="brands-digi text-center d-flex align-items-center justify-content-center">
+            <img src="./assets/images/digiclub.svg" alt="" class="img-fluid" width="95" height="25">
+          </a>
+          <a href="/" class="brands-digi text-center d-flex align-items-center justify-content-center">
+            <img src="./assets/images/digiplus.svg" alt="" class="img-fluid" width="95" height="25">
+          </a>
+          <a href="/" class="brands-digi text-center d-flex align-items-center justify-content-center">
+            <img src="./assets/images/digistyle.svg" alt="" class="img-fluid" width="95" height="25">
+          </a>
+          <a href="/" class="brands-digi text-center d-flex align-items-center justify-content-center">
+            <img src="./assets/images/digipay.svg" alt="" class="img-fluid" width="95" height="25">
+          </a>
+          <a href="/" class="brands-digi text-center d-flex align-items-center justify-content-center">
+            <img src="./assets/images/digimag.svg" alt="" class="img-fluid" width="95" height="25">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="./assets/scripts/script.js"></script>
+  <script>
+    var swiper = new Swiper(".hiro-slider", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+    var swiper = new Swiper(".offer-product-slider", {
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+          spaceBetween: 5,
+        },
+        768: {
+          slidesPerView: 5.2,
+          spaceBetween: 5,
+        },
+        1024: {
+          slidesPerView: 7.1,
+          spaceBetween: 5,
+        },
+      },
+    });
+    var swiper = new Swiper(".digi-offer-slider", {
+      slidesPerView: 3.2,
+      spaceBetween: 0,
+      breakpoints: {
+        0: {
+          slidesPerView: 3.2,
+          spaceBetween: 0,
+        },
+        768: {
+          slidesPerView: 4.2,
+          spaceBetween: 0,
+        },
+        1024: {
+          slidesPerView: 7,
+          spaceBetween: 0,
+        },
+      },
+    });
+    var swiper = new Swiper(".fav-brand-slider", {
+      slidesPerView: 3.2,
+      spaceBetween: 0,
+      breakpoints: {
+        640: {
+          slidesPerView: 3.2,
+          spaceBetween: 0,
+        },
+        768: {
+          slidesPerView: 4.2,
+          spaceBetween: 0,
+        },
+        1024: {
+          slidesPerView: 9,
+          spaceBetween: 0,
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>
